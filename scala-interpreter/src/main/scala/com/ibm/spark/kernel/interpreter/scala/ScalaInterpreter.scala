@@ -68,6 +68,7 @@ class ScalaInterpreter(
     settings.classpath.value =
       classpath.distinct.mkString(java.io.File.pathSeparator)
     settings.embeddedDefaults(_runtimeClassloader)
+    settings.usejavacp.value  = true
   }
 
   private val lastResultOut = new ByteArrayOutputStream()
